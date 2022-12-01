@@ -91,8 +91,8 @@ export default function Estudantes() {
 
     return (
         <Fragment>
-            <Button onClick={() => { Listar(); setAlerta(0) }}>Listar</Button>
-            <Button onClick={() => { setLis(2); setAlerta(0) }}>Incluir</Button>
+            <Button variant="contained" color="inherit" className="m-3" onClick={() => { Listar(); setAlerta(0) }}>Listar</Button>
+            <Button variant="contained" color='warning' className="m-3" onClick={() => { setLis(2); setAlerta(0) }}>Incluir</Button>
 
             {lis !== 0 &&(
                 <Grid container spacing='2'>
@@ -151,11 +151,11 @@ export default function Estudantes() {
                 {lis === 1 &&(
                     <Grid>
                         {pag > 1  &&(
-                            <Button onClick={()=> {setPag(pag-1); setRetorno(1); setAlerta(0)}}>Anterior</Button>
+                            <Button variant="contained" color="info" className="m-3" onClick={()=> {setPag(pag-1); setRetorno(1); setAlerta(0)}}>Anterior</Button>
                          )}   
 
                         {pag < totalPag &&(
-                            <Button onClick={()=> {setPag(pag+1); setRetorno(1); setAlerta(0)}}>Próxima</Button> 
+                            <Button variant="contained" color="info" className="m-3" onClick={()=> {setPag(pag+1); setRetorno(1); setAlerta(0)}}>Próxima</Button> 
                         )}
                     </Grid>                    
                     )}
